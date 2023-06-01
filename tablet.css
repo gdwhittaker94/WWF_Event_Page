@@ -1,0 +1,924 @@
+/**CSS Normalisation (https://necolas.github.io/normalize.css/) */
+
+/*!========== Universal/Default Settings ==========*/
+html {
+    line-height: 1.15;
+    /*Correct the line height in all browsers */
+    -webkit-text-size-adjust: 100%;
+    /*Prevent font-size adjustments after orientation changes (IOS)*/
+    }
+
+    *,
+    body,
+    *::before,
+    *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /*Remove the margin, padding and border of all elements (all browsers)*/
+    font-size: 10px;
+    /*10px = 1em -> pixel size/10 = #em (16px=1.6em)*/
+    box-sizing: border-box;
+    /*The full area/size of an element`s box is measured by its total height and width, not just the content section. The different box sections adjust to the defined box size */
+    }
+
+/*!========== Common Elements ==========*/
+main {
+display: block;
+/*Render main element consistently (IE)*/
+}
+
+h1 {
+font-size: 2em;
+margin: 0 0;
+/*Correct font-size and margin for h1 elements within section and article contexts (Chrome, Firefox, Safari) */
+}
+
+img {
+border-style: none;
+display: block;
+/*Removes the small gap that appears under images */
+max-inline-size: 100%;
+/*Make image responsive but without allowing it to outgrow its original size*/
+}
+
+hr {
+box-sizing: content-box;
+height: 0;
+/*Add the correct box-sizing (Firefox)*/
+overflow: visible;
+/*Show overflow (Edge, IE)*/
+}
+
+pre {
+font-family: monospace, monospace;
+/*Correct the inheritance and scaling of font size in all browsers*/
+font-size: 1em;
+/*Correct the odd em font sizing in all browsers.*/
+}
+
+a {
+background-color: transparent;
+/*Remove the gray background on active links (IE10)*/
+}
+
+a,
+li,
+:link,
+:visited {
+text-decoration: none;
+/*Remove default link underline styling*/
+}
+
+ul,
+ol {
+list-style: none;
+/*List markers are not commonly needed*/
+}
+
+b,
+strong {
+font-weight: bolder;
+/*Add the correct font weight (Chrome, Edge, Safari)*/
+}
+
+/**===========================CUSTOM-STYLES==============================*/
+
+:root {
+    --roboto: 'Roboto Condensed', sans-serif;
+    /* Roboto: 300, 400, 700*/
+    --open_sans: 'Open Sans', sans-serif;
+    /* Open Sans: 300, 400, 600, 800 */
+    --georgia: Georgia, 'Times New Roman', Times, serif;
+
+    /* Color Variables */
+    --dark-orange: #D55C19;
+    --light-orange: #E98301;
+    --red: #DE3831;
+    --red-pink: #E32B3D;
+    --gray: #333333;
+    --lightgraytxt: #989B97;
+    --lightgraybg: #f2f2f2;
+    --cream: #FDF3E6;
+    --beige: #F1EEE9;
+    --link-blue: #0871a5;
+    --black: #000;
+    --white: #fff;
+}
+
+/** MOBILE SEARCHBAR + NAVBAR */
+
+/* Searchbar Area */
+
+.navbar {
+    display: none;
+}
+
+.navbar__top {
+    display: flex;
+    block-size: 10%;
+}
+
+.navbar__left {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex: 1;
+    padding: 20px 15px;
+}
+
+.navbar__img {
+    height: 80px;
+}
+
+.navbar__right {
+    display: flex;
+    flex-direction: column;
+    flex: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__right label, .navbarTD__searchbar label {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--lightgraytxt);
+    font-family: var(--open_sans);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.searchbar, #login {
+    border: 1px var(--lightgraytxt) solid;
+    border-radius: 3px;
+    color: var(--lightgraytxt);
+    font-size: 1.2rem;
+    font-family: var(--open_sans);
+    padding: 5px;
+    width: 80%;
+    box-shadow: 0px 1px 3px 1px #b2b0b04f;
+}
+
+.searchbar:focus, #login:hover {
+    border: 2px --black solid;
+}
+
+/* Navbar Area */
+.navbar__bottom {
+    display: flex;
+    color: var(--white);
+    height: 6vh;
+}
+
+.navbar__menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.navbar__menu p {
+    font-family: var(--open_sans);
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.navbar__menu:hover {
+    text-decoration: underline;
+}
+
+.navbar__menu--darkOrange {
+    background-color: var(--dark-orange);
+}
+
+.navbar__menu--lightOrange {
+    background-color: var(--light-orange);
+}
+
+.navbar__menu--red {
+    background-color: var(--red);
+}
+
+/* *TABLET/DESKTOP SEARCHBAR + NAVBAR */
+
+.navbarTD {
+    background-color: var(--black);
+    height: 65px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbarTD__logo {
+    background-color: var(--white);
+    height: 120px;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    box-shadow: 0px 1px 7px 0px #c8c8c8;
+}
+
+.navbarTD__img {
+    max-height: 95%;
+    max-width: 95%;
+    margin: 0 auto;
+    box-shadow: 0px 1px 7px 0px #c8c8c8;
+    padding: 5px;
+}
+
+.navbarTD__wrapper {
+    display: flex;
+    max-width: 80%;
+    margin-left: auto;
+    align-items: center;
+    margin-right: 20px;
+    flex: 1;
+}
+.navbarTD__searchbar{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.material-symbols-outlined {
+    color: var(--white)
+}
+
+.navbarTD__button {
+    font-family: var(--open_sans);
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.navbarTD__button--red {
+    background-color: var(--red);
+    margin-left: 20px;
+}
+
+.navbarTD__button--darkOrange {
+    background-color: var(--dark-orange);
+}
+
+.navbarTD__button--lightOrange {
+    background-color: var(--light-orange);
+}
+
+/* *HEADER */
+
+.header {
+    background-color: var(--lightgraybg);
+    display: flex;
+    align-items: center;
+}
+
+.header__top {
+    margin-left: 15%;
+}
+
+.header__mainHeader {
+    font-size: 5rem;
+    color: var(--gray);
+    text-align: center;
+    font-family: var(--open_sans);
+    font-weight: 800;
+    letter-spacing: -5px;
+}
+
+.header__mainHeader--span {
+    color: var(--dark-orange);
+}
+
+.header__subHeader {
+    text-align: center;
+    font-family: var(--open_sans);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+hr {
+    display: none;
+}
+
+.header__bottom {
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.header__bottom label {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-family: var(--open_sans);
+    font-weight: 600;
+    color: var(--gray);
+    margin-right: 5px;
+}
+
+#login {
+    width: 120px;
+    margin-right: 5px;
+}
+
+.arrowButton {
+    border-radius: 50%;
+    background-color: var(--black);
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 2px 5px;
+    color: var(--white);
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px white solid;
+    cursor: pointer;
+}
+
+.header__link {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: var(--open_sans);
+    margin-right: 5px;
+    color: var(--link-blue) !important;
+}
+
+/* *(OLD SECTION) MAIN IMAGE */
+/*
+.main {
+    background-image: url(./img/compressed/marathon.jpg);
+    background-color: var(--lightgraybg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+.main__flexbox {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin-inline: 5%;
+    align-content: center;
+}
+
+.main__flexboxHeaders {
+    margin-top: 2vh;
+    margin-bottom: 30vh;
+    color: var(--white);
+    font-family: var(--roboto);
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-shadow: 0px 0px 20px black;
+}
+
+.main__flexboxHeaders h2 {
+    font-size: 2.5rem;
+}
+
+.main__flexboxHeaders h1 {
+    font-size: 4rem;
+}
+
+.main__flexboxButton {
+    max-width: 400px;
+}
+.button {
+    color: var(--white);
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -1px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--gray);
+    transition: background-color 300ms;
+}
+
+.button--redPink {
+    background-color: var(--red-pink);
+}
+
+.arrowButton--small {
+    font-size: 1.4rem;
+    margin-left: 10px;
+} */
+
+/*IMAGE CAROUSEL */
+
+.carousel__container {
+    max-width: 100%;
+}
+
+.carousel__carousel {
+    background-color: var(--lightgraytxt);
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel__slider {
+    height: 100%;
+    display: flex;
+    width: 600%;
+    transition: all 300ms;
+}
+
+.carousel__section {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 300ms;
+}
+
+.carousel__section:hover {
+    transform: scale(1.02);
+}
+
+.carousel__img {
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+/* ^^ How slider works: Each section occupies entire viewport (100% width). There are 6 sections so total width of slider has to be 600% to fit them all nicely. Overflow is hidden and. therefore, we only see 1/6 of the total slider at any one time, with the rest brough into view via left and right arrow buttons via JS. */
+
+/* CONTENT ON IMAGES */
+
+.carousel__imageText {
+    position: absolute;
+    top: 44%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    color: var(--white);
+    font-family: var(--roboto);
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-shadow: 0px 0px 20px black;
+    text-align: left;
+}
+
+.carousel__imageText h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+.carousel__imageText h1 {
+    font-size: 4.5rem;
+}
+
+.carousel__imageText--smaller  {
+    top: 35%;
+}
+
+.carousel__imageText--smaller h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.carousel__imageText--smaller h1 {
+    font-size: 3.4rem;
+    text-align: center;
+}
+
+.carousel__imageText--centered {
+    text-align: center;
+    top: 40%;
+}
+
+.carousel__imageText--centered h2 {
+    margin-top: 0;
+}
+
+.button {
+    color: var(--white);
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -1px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--gray);
+    transition: background-color 300ms;
+}
+
+.button--redPink {
+    background-color: var(--red-pink);
+}
+
+.arrowButton--small {
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+.carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.carousel__arrow--left {
+    left: 10px;
+}
+
+.carousel__arrow--right {
+    right: 10px;
+}
+
+.carousel__circles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.carousel__circleButton {
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: var(--red-pink);
+}
+
+/* *COUNTDOWN CLOCK */
+
+.countdown {
+    background-color: var(--gray);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.8rem;
+    font-family: var(--open_sans);
+    text-transform: uppercase;
+}
+
+.countdown span:first-child {
+    margin-right: 10px;
+}
+
+/* *KEY RACE INFO */
+
+.keyRaceInfo {
+    background-color: var(--red-pink);
+}
+
+.keyRaceInfo__wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-block: 20px;
+    color: var(--white);
+    text-align: center;
+}
+
+.keyRaceInfo__wrapper span, .keyRaceInfo p, .yellowLink {
+    font-size: 1.6rem;
+    font-family: var(--open_sans);
+    line-height: 2.4rem;
+}
+
+.keyRaceInfo__wrapper span, .yellowLink {
+    font-weight: 800;
+}
+
+.yellowLink {
+    color: yellow;
+}
+
+.yellowLink:hover {
+    text-decoration: underline;
+}
+
+/* *RACE PROMO TEXT */
+
+.eventText {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--gray);
+}
+
+.eventText__chicagoLogo {
+    display: grid;
+    place-items: center;
+    padding: 5%;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.youtubeVideo {
+    position: relative;
+    padding-bottom: 56%;
+    padding-top: 25px;
+    height: 0px;
+    margin-bottom: 20px;
+}
+
+.youtubeVideo iframe {
+    position: absolute;
+    inset: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.eventText__text {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-family: var(--open_sans);
+    line-height: 2.3rem;
+}
+
+.eventText__text:nth-child(4){
+    font-weight: bold;
+}
+
+/* *PANDA RUNNER INFO */
+
+.pandaRunner {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--gray);
+    box-shadow: 0px 1px 4px 0px #858484;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.pandaRunner__wrapper {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px 0px #858484
+}
+
+.pandaRunner__header {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--open_sans);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pandaRunner__list {
+    list-style:disc;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-block: 20px;
+}
+
+.pandaRunner__listItem {
+    font-family: var(--open_sans);
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+    margin-bottom: 10px;
+}
+
+/* *BUTTONS + LINKS */
+
+.buttonsLinks {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 150px;
+    color: var(--gray);
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    margin-bottom: 10px !important;
+}
+
+.button--redPink {
+    min-width: 70%;
+    margin: 0 auto;
+}
+
+.button--lightOrange {
+    background-color: var(--light-orange);
+    min-width: 70%;
+    margin: 0 auto;
+}
+
+.buttonsLinks__text, .buttonsLinks__text a {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--open_sans);
+    margin-block: 20px;
+}
+
+.buttonsLinks__text a {
+    color: var(--link-blue);
+}
+
+/* *GOOGLE MAP */
+
+.map {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.map__header {
+    font-family: var(--roboto);
+    margin-bottom: 10px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.map__container {
+    width: 100%;
+    height: 50vh;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 1px 4px 0px #858484;
+}
+
+
+/* *TOP FUNDRAISERS + TOP TEAMS*/
+
+.topFundraisers {
+    background-color: var(--beige);
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.topTeams {
+    background-color: var(--cream);
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.topFundraisers__wrapper, .topTeams__wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-block: 20px;
+    color: var(--gray);
+    font-family: var(--open_sans);
+    text-align: center;
+}
+
+.topFundraisers__header, .topTeams__header {
+    font-family: var(--roboto);
+    margin-bottom: 15px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.topFundraisers__listItem,
+.topFundraisers__listItem a,
+.topFundraisers__link,
+.topTeams__listItem,
+.topTeams__listItem a,
+.topTeams__link {
+    font-size: 1.3rem;
+    font-family: var(--open_sans);
+    line-height: 2.3rem;
+}
+
+.topFundraisers__listItem a,
+.topFundraisers__link,
+.topTeams__listItem a,
+.topTeams__link {
+    color: var(--link-blue);
+}
+
+.topFundraisers__link, .topTeams__link {
+    font-weight: 600;
+}
+
+/* *DONATE BOX */
+
+.donateBox {
+    background-color: var(--beige);
+    margin-bottom: 30px;
+}
+
+.donateBox__wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-block: 20px;
+    color: var(--gray);
+    font-family: var(--open_sans);
+    text-align: center;
+}
+
+.donateBox__mainHeader {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.donateBox__subHeader {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--dark-orange);
+    margin-bottom: 10px;
+}
+
+.donateBox__text {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    margin-bottom: 20px;
+}
+
+.donateBox__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donateBox__search img {
+    margin-left: 5px;
+}
+
+/* *FOOTER */
+
+.footer {
+    max-width: 60%;
+    margin: 0 auto 20px;
+}
+
+.footer__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer__listItem--panda {
+    max-width: 50px;
+}
+
+.footer__link {
+    font-size: 1.2rem;
+    font-family: var(--open_sans);
+    color: var(--link-blue);
+}
+
+.footer__address {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__addressText, .footer__copyright {
+    font-size: 1.3rem;
+    font-family: var(--open_sans);
+    margin-bottom: 5px;
+}
+
+.footer__addressText:first-child {
+    font-weight: 600;
+}
+
+.footer__socialMedia {
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+}
+
+.footer__icon {
+    max-width: 20%;
+    cursor: pointer;
+}
+
+.facebook {
+    max-width: 13%;
+}

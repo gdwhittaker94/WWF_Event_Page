@@ -1,0 +1,13 @@
+**THINGS LEARNED**
+
+- For page links dropdown box: using JS event listener to make an absolutely positioned <ul> element to appear on click, then disappear on second click (using a variable to store a boolean value and then compare the current value with the stored value).
+
+- More complicated image carousel using JS which links arrows and circular buttons together, and sets an image slide limit (i.e. doesn't go back to start).
+
+    "How slider works: Each section occupies entire viewport (100% width). There are 6 sections so total width of slider has to be 600% to fit them all nicely. Overflow is hidden and. therefore, we only see 1/6 of the total slider at any one time, with the rest brough into view via left and right arrow buttons via JS."
+
+- Learned how to make a countdown timer using JS (and some specific and slightly complicated maths formulas).
+
+- Learned that embedding Youtube videos and Google maps is relatively straightforward (as they provide embedding code within their programs).
+
+- Due to <head> media queries and the necessity for 3 css stylesheets it was necessary to mark up two distinct header/nav bar areas in order to achieve the different website styles at different sizes.

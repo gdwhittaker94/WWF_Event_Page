@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<!--* Media Queries -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./desktop.css"
+			media="screen and (min-width: 1080px)"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./tablet.css"
+			media="screen and (min-width: 751px) and (max-width: 1079px)"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./mobile.css"
+			media="screen and (max-width: 750px)"
+		/>
+		<!--* Favicon -->
+		<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="./img/favicon/apple-touch-icon.png"
+		/>
+		<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="./img/favicon/favicon-32x32.png"
+		/>
+		<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="./img/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+		<!--* Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&family=Roboto+Condensed:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<!--* JS Link-->
+		<script src="./script.js" defer></script>
+		<!--* Title -->
+		<title>WWF Event Page</title>
+	</head>
+	<body>
+		<!-- *MOBILE SEARCHBAR + NAVBAR -->
+		<nav class="navbar">
+			<div class="navbar__top">
+				<div class="navbar__left">
+					<img
+						src="/img/logo/WWF_logo.svg.png"
+						alt="WWF Logo"
+						class="navbar__img"
+					/>
+				</div>
+				<div class="navbar__middle">
+					<p>
+						Page Links
+						<span
+							><img src="/img/icon/down_arrow48.png" alt="Down Arrow Icon"
+						/></span>
+					</p>
+					<ul class="navbar__dropdown">
+						<li class="navbar__dropdownItem">
+							<a href="#keyInfo">Key Race Information</a>
+						</li>
+						<li class="navbar__dropdownItem">
+							<a href="#courseInfo">Course Information</a>
+						</li>
+						<li class="navbar__dropdownItem">
+							<a href="#pandaRunners">Panda Runners</a>
+						</li>
+						<li class="navbar__dropdownItem">
+							<a href="#location">Course Location</a>
+						</li>
+						<li class="navbar__dropdownItem">
+							<a href="#fundraisers">Top Fundraisers</a>
+						</li>
+						<li class="navbar__dropdownItem">
+							<a href="#donate">Donate</a>
+						</li>
+					</ul>
+				</div>
+				<div class="navbar__right">
+					<label for="searchbar">Find a Fundraiser</label>
+					<input
+						type="search"
+						class="searchbar"
+						id="searchbar"
+						placeholder="First Name, Last Name, Campaign Name"
+					/>
+				</div>
+			</div>
+			<ul class="navbar__bottom">
+				<li class="navbar__menu navbar__menu--darkOrange">
+					<p>FAQ</p>
+				</li>
+				<li class="navbar__menu navbar__menu--lightOrange">
+					<p>Contact Us</p>
+				</li>
+				<li class="navbar__menu navbar__menu--red">
+					<p>Donate</p>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- *TABLET/DESKTOP SEARCHBAR + NAVBAR -->
+		<nav class="navbarTD">
+			<div class="navbarTD__logo">
+				<img
+					src="./img/logo/WWF_logo.svg.png"
+					alt="WWF Logo"
+					class="navbarTD__img"
+				/>
+			</div>
+			<div class="navbarTD__wrapper">
+				<!-- Searchbar -->
+				<div class="navbarTD__searchbar">
+					<label for="searchbar">Find a Fundraiser</label>
+					<input
+						type="search"
+						class="searchbar"
+						id="searchbar"
+						placeholder="First Name, Last Name, Campaign Name"
+					/>
+					<span class="material-symbols-outlined">search</span>
+				</div>
+
+				<!-- Buttons -->
+				<div class="navbarTD__button navbarTD__button--red">
+					DONATE
+				</div>
+				<div class="navbarTD__button navbarTD__button--darkOrange">
+					FAQ
+				</div>
+				<div class="navbarTD__button navbarTD__button--lightOrange">
+					CONTACT US
+				</div>
+			</div>
+		</nav>
+
+		<!-- *HEADER -->
+
+		<header class="header">
+			<div class="header__top">
+				<h1 class="header__mainHeader">
+					Panda<span
+						class="header__mainHeader header__mainHeader--span"
+						>Nation</span
+					>
+				</h1>
+				<p class="header__subHeader">
+					Channel your passion for the planet
+				</p>
+			</div>
+			<hr />
+			<div class="header__bottom">
+				<label for="login">Login</label>
+				<input type="text" id="login" placeholder="Username" />
+				<input type="password" id="login" placeholder="Password" />
+				<span class="arrowButton">></span>
+				<a href="#" class="header__link">Forget Password?</a>
+			</div>
+		</header>
+
+		<!-- *IMAGE CAROUSEL -->
+		<main class="carousel__container">
+			<div class="carousel__carousel">
+				<div class="carousel__slider">
+					<!-- SLIDE 1 -->
+					<section class="carousel__section">
+						<img
+							class="carousel__img"
+							src="./img/images/marathon.jpg"
+							alt="6 Marathon runners"
+						/>
+						<div class="carousel__imageText">
+							<h2 class="carousel__h2">October 8, 2023</h2>
+							<h1 class="carousel__h1">
+								Bank of America Chicago Marathon
+							</h1>
+						</div>
+					</section>
+					<!-- SLIDE 2 -->
+					<section class="carousel__section">
+						<img
+							class="carousel__img"
+							src="./img/images/chicago_skyline.jpg"
+							alt="Chicago Skyline"
+						/>
+						<div class="carousel__imageText">
+							<button class="button button--redPink" style="min-width: 40%">
+								Register for this Race
+								<span class="arrowButton arrowButton--small">></span>
+							</button>
+						</div>
+					</section>
+					<!-- SLIDE 3 -->
+					<section class="carousel__section">
+						<img
+							class="carousel__img"
+							src="./img/images/runners_bridge.jpg"
+							alt="A photo of runners from atop of bridge"
+						/>
+						<div
+							class="carousel__imageText carousel__imageText--smaller"
+						>
+							<h2 class="carousel__h2">Fundraising Commitment</h2>
+							<h1 class="carousel__h1">Pre-November 16: $1250</h1>
+							<h1 class="carousel__h1">Post-November 16: $1750</h1>
+						</div>
+					</section>
+					<!-- SLIDE 4 -->
+					<section class="carousel__section">
+						<img
+							class="carousel__img"
+							src="./img/images/chicago_bean.jpg"
+							alt="Chicago City Centre Marathon runners"
+						/>
+						<div
+							class="carousel__imageText carousel__imageText--centered"
+						>
+							<h2 class="carousel__h2">Registration Deadline</h2>
+							<h1 class="carousel__h1">January 24, 2023</h1>
+						</div>
+					</section>
+					<!-- SLIDE 5 -->
+					<section class="carousel__section">
+						<img
+							class="carousel__img"
+							src="./img/images/runners_trees.jpg"
+							alt="A photo of runners running passed trees"
+						/>
+					</section>
+					<!-- SLIDE 6 -->
+					<section class="carousel__section">
+						<img
+							class="carousel__img"
+							src="./img/images/chicago_shoreline.jpg"
+							alt="Chicago shoreline from a boat"
+						/>
+
+						<div
+							class="carousel__imageText carousel__imageText--centered"
+						>
+							<h2 class="carousel__h2">Location</h2>
+							<h1 class="carousel__h1">Chicago, IL</h1>
+							<h2 class="carousel__h2">
+								<a
+									href="https://assets-chicagomarathon-com.s3.amazonaws.com/wp-content/uploads/2022/09/2022-Bank-of-America-Chicago-Marathon-Course-Map.pdf"
+									class="yellowLink"
+									target="_blank"
+									>(View Course Map)</a
+								>
+							</h2>
+						</div>
+					</section>
+				</div>
+
+				<div class="carousel__controls">
+					<!-- Arrows -->
+					<span class="carousel__arrow carousel__arrow--left">
+						<img
+							src="./img/icon/left_arrow24.png"
+							alt="Left Arrow"
+						/>
+					</span>
+					<span class="carousel__arrow carousel__arrow--right">
+						<img
+							src="./img/icon/right_arrow24.png"
+							alt="Left Arrow"
+						/>
+					</span>
+					<!-- Circle Buttons -->
+					<ul class="carousel__circles">
+						<li class="carousel__circleButton selected"></li>
+						<li class="carousel__circleButton"></li>
+						<li class="carousel__circleButton"></li>
+						<li class="carousel__circleButton"></li>
+						<li class="carousel__circleButton"></li>
+						<li class="carousel__circleButton"></li>
+					</ul>
+				</div>
+			</div>
+		</main>
+
+		<!-- *COUNTDOWN CLOCK -->
+		<div class="countdown" id="keyInfo"></div>
+
+		<!-- *KEY RACE INFO -->
+		<section class="keyRaceInfo">
+			<div class="keyRaceInfo__wrapper">
+				<p>
+					<span class="keyRaceInfo__bold">Race Schedule:</span>
+					Sunday, October 8, 2023 - Bank of America Chicago Marathon
+				</p>
+				<p>
+					<span class="keyRaceInfo__bold"
+						>Fundraising Commitment:</span
+					>
+					Marathon - $1250 if registering before November 16, $1,750
+					if registering after
+				</p>
+				<p>
+					<span class="keyRaceInfo__bold"
+						>Registration Deadline:</span
+					>
+					January 24, 2023
+				</p>
+				<p>
+					<span class="keyRaceInfo__bold">Location:</span> Chicago, IL
+					<a
+						href="https://assets-chicagomarathon-com.s3.amazonaws.com/wp-content/uploads/2022/09/2022-Bank-of-America-Chicago-Marathon-Course-Map.pdf"
+						class="yellowLink"
+						target="_blank"
+						>(View Course Map)</a
+					>
+				</p>
+			</div>
+		</section>
+
+		<!-- *RACE PROMO TEXT -->
+		<section class="eventText">
+			<div class="eventText__chicagoLogo" id="courseInfo">
+				<img
+					src="./img/logo/chicago_logo.png"
+					alt="Bank of America Chicago Marathon Logo"
+				/>
+			</div>
+			<div class="youtubeVideo">
+				<iframe
+					src="https://www.youtube.com/embed/1lDPfiEydvs"
+					title="YouTube video player"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				></iframe>
+			</div>
+			<p class="eventText__text">
+				Be the hero nature needs - raise funds to protect our planet
+				as you run wild at the Bank of America Chicago Marathon on
+				October 8, 2023.
+			</p>
+			<p class="eventText__text">
+				When you run with WWF's Panda Nation, you'll tackle the
+				biggest, toughest challenges facing the planet—things like
+				illegal wildlife trade, deforestation, climate change and
+				water scarcity. While those challenges are massive, when we
+				work together, we can take on anything. That's why every day,
+				WWF works in unity with many people, partners, and
+				institutions to achieve lasting conservation solutions.
+			</p>
+			<p class="eventText__text">IMPORTANT</p>
+			<p class="eventText__text">
+				Please note, the charity program for the Chicago Marathon
+				provides no option for deferral, transfer to another runner or
+				refunding of registration fees. By registering for the 2023
+				Chicago Marathon, you understand these terms and agree to your
+				fundraising commitment, even if you are unable to participate
+				in the race for any reason.
+			</p>
+		</section>
+
+		<!-- *PANDA RUNNER INFO -->
+		<section class="pandaRunner" id="pandaRunners">
+			<img
+				src="./img/images/panda_on_bike.jpg"
+				alt="Person in Panda Costume"
+				class="pandaRunner_img"
+			/>
+			<div class="pandaRunner__wrapper">
+				<h2 class="pandaRunner__header">
+					As a Panda Nation Runner, you'll receive:
+				</h2>
+				<ul class="pandaRunner__list">
+					<li class="pandaRunner__listItem">
+						Exclusive Panda Nation race gear, only available to our
+						Panda Nation athletes who raise $150 or more
+					</li>
+					<li class="pandaRunner__listItem">
+						Personal, one-on-one fundraising support to help you
+						exceed your goals
+					</li>
+					<li class="pandaRunner__listItem">
+						A page on our website for you to personalize and collect
+						donations
+					</li>
+					<li class="pandaRunner__listItem">
+						An accomplished feeling by knowing you achieved a goal for
+						yourself AND our world
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- *BUTTONS + LINKS -->
+		<div class="buttonsLinks">
+			<button class="button button--redPink">
+				Register for the race
+			</button>
+			<button class="button button--lightOrange">Learn more</button>
+			<p class="buttonsLinks__text">
+				Can't make it to this race? No worries - you can
+				<a href="#">check out our other events.</a>
+			</p>
+		</div>
+
+		<!-- *GOOGLE MAP -->
+		<div class="map" id="location">
+			<h1 class="map__header">Race Location</h1>
+			<div class="map__container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20217.933729053406!2d-87.64887394622477!3d41.880595235619715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca066ac4d85%3A0x3daab95490cf8cb4!2sGrant%20Park!5e0!3m2!1ses!2ses!4v1683640419323!5m2!1ses!2ses"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				>
+				</iframe>
+			</div>
+		</div>
+
+		<!-- *TOP FUNDRAISERS -->
+		<div class="topFundraisers" id="fundraisers">
+			<div class="topFundraisers__wrapper">
+				<h1 class="topFundraisers__header">Top Fundraisers</h1>
+				<ul class="topFundraisers__list">
+					<li class="topFundraisers__listItem">
+						1 - <a href="#">Adam Smith</a> ($2, 000.00)
+					</li>
+					<li class="topFundraisers__listItem">
+						2 - <a href="#">Amy Smith</a> ($1, 980.00)
+					</li>
+					<li class="topFundraisers__listItem">
+						3 - <a href="#">Abigail Smith</a> ($1, 870.00)
+					</li>
+					<li class="topFundraisers__listItem">
+						4 - <a href="#">Antony Smith</a> ($1, 790.00)
+					</li>
+					<li class="topFundraisers__listItem">
+						5 - <a href="#">Ahmed Smith</a> ($1, 670.00)
+					</li>
+				</ul>
+				<a href="#" class="topFundraisers__link"
+					>View More Top Fundraisers</a
+				>
+			</div>
+		</div>
+
+		<!-- *TOP TEAMS -->
+		<div class="topTeams">
+			<div class="topTeams__wrapper">
+				<h1 class="topTeams__header">Top Teams</h1>
+				<ul class="topTeams__list">
+					<li class="topTeams__listItem">
+						1 - <a href="#">Torrens University</a> ($1, 000.00)
+					</li>
+				</ul>
+				<a href="#" class="topTeams__link">View More Top Teams</a>
+			</div>
+		</div>
+
+		<!-- *DONATE BOX -->
+		<div class="donateBox" id="donate">
+			<div class="donateBox__wrapper">
+				<h1 class="donateBox__mainHeader">
+					Donate to a Fundraiser or a Campaign
+				</h1>
+				<h2 class="donateBox__subHeader">Find A Fundraiser's Page</h2>
+				<p class="donateBox__text">
+					Enter the name (or the first few letters) of the Panda
+					Nation campaign or the person who created it:
+				</p>
+				<div class="donateBox__search">
+					<input
+						type="text"
+						class="searchbar"
+						placeholder="First Name, Last Name, Campaign Name"
+					/>
+					<img src="./img/icon/search_icon.svg" alt="Search Icon" />
+				</div>
+			</div>
+		</div>
+
+		<!-- *FOOTER -->
+		<footer class="footer">
+			<ul class="footer__list">
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> Careers </a>
+				</li>
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> Contact </a>
+				</li>
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> News & Press </a>
+				</li>
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> Privacy Policy </a>
+				</li>
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> Site Terms </a>
+				</li>
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> State Disclosures </a>
+				</li>
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> Help </a>
+				</li>
+				<li class="footer__listItem">
+					<a href="" class="footer__link"> Login </a>
+				</li>
+				<li class="footer__listItem footer__listItem--panda">
+					<img src="./img/logo/WWF_logo.svg.png" alt="WWF Logo" />
+				</li>
+			</ul>
+
+			<div class="footer__address">
+				<p class="footer__addressText">World Wildlife Fund</p>
+				<p class="footer__addressText">1250 24th Street, N.W.</p>
+				<p class="footer__addressText">Washington, DC 20037</p>
+				<br />
+				<p>
+					<a
+						href="mailto: enquiries@wwf.org.au"
+						target="_blank"
+						class="footer__addressText"
+						>Email Us</a
+					>
+				</p>
+			</div>
+
+			<div class="footer__socialMedia">
+				<div class="footer__icon facebook">
+					<img
+						src="./img/social_media/facebook-f.svg"
+						alt="Facebook"
+					/>
+				</div>
+				<div class="footer__icon twitter">
+					<img src="./img/social_media/twitter.svg" alt="Facebook" />
+				</div>
+				<div class="footer__icon instagram">
+					<img
+						src="./img/social_media/instagram.svg"
+						alt="Facebook"
+					/>
+				</div>
+				<div class="footer__icon youtube">
+					<img src="./img/social_media/youtube.svg" alt="Facebook" />
+				</div>
+				<div class="footer__icon linkedin">
+					<img
+						src="./img/social_media/linkedin-in.svg"
+						alt="Facebook"
+					/>
+				</div>
+			</div>
+
+			<p class="footer__copyright">©️ 2023 World Wildlife Fund</p>
+		</footer>
+	</body>
+</html>
